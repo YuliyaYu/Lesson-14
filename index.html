@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <script>
+        var log = 'admin';
+        var age = 18;
+        var password = 'qwerty123';
+
+        var msg1 = +prompt('Введите ваш возраст');
+
+        if (!(isNaN(msg1)) && !(msg1 == 0) && (msg1 >= age)) {
+            var login = prompt('Введите ваш логин');
+            
+            if (!(login == log)){
+                document.write('<h1>Добро пожаловать!</h1>');
+            }else{
+                var passworD = prompt('Введите пароль')
+                
+                if (password == passworD){
+                    document.write('<h1>Администратор, добро пожаловать!</h1>');
+                }else{
+                    document.write('<h1>Ошибка ввода!</h1>');
+                }
+            }
+        } else if (msg1 < age) {
+            document.write('<h1>В доступе отказано!</h1>');
+            document.write('<h1>Вы несовершеннолетний</h1>');
+        } else {
+            document.write('<h1>Ошибка ввода</h1>');
+        }
+    
+        document.write('<h1>Спасибо! Мне понравилось :) Требую продолжения банкета :)</h1>');
+    </script>
+    
+</html>
